@@ -11,4 +11,5 @@
 // about supported directives.
 //
 //= require app
+//= require twitter/bootstrap
 //= require_tree ./angular

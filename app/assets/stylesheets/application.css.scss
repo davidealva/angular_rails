@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+@import "twitter/bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Basic);
+
+$primary: #5D5958;
+$background: #EBEAEA;
+$active: #66AF33;
+
+body {
+  color: $primary;
+  font-size: 1.0em;
+  font-family: Helvetica, sans-serif;
+  background: lighten($background, 5%);
+}
+
+p {
+  font-size: 1.5em;
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background: darken($primary, 10%);
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+  font-family: 'Basic';
+  font-size: 2.0em;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: lighten($primary, 50%);
+}
+
+
+.navbar-default .navbar-nav > li > a {
+  font-size: 1.5em;
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: lighten($primary, 50%);
+}
+
+#screencast-list-container {
+  margin-left: -20px;
+  height: 960px;
+  border-right: 1px solid #ddd;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  ul {
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+    li {
+      cursor: pointer;
+      border-bottom: 1px solid #ddd;
+      padding: 0 20px;
+    }
+  }
+  h3 {
+    font-size: 14px;
+    small {
+      font-size: 12px;
+      color: #ccc;
+      font-weight: normal;
+    }
+    &.active {
+      color: $active;
+    }
+  }
+}
+
+.about {
+  padding: 5px 25px;
+}
+
+#screencast-view-container {
+  min-height: 700px;
+  padding: 5px 25px;
+
+  #player {
+    border: 1px solid #000;
+    max-width: 800px;
+    margin-top: 10px;
+  }
+  a {
+      color: $active;
+    }
+}
+
+.video-link {
+  margin-top: 10px;
+}
+
+
+
